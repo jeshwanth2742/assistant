@@ -9,7 +9,8 @@
     <div class="container">
         <h2>Telugu → English Translator</h2>
 
-        <input type="text" id="teluguInput" placeholder="Enter Telugu word...">
+        <input type="text" id="teluguInput" placeholder="Enter Telugu word..." onkeydown="if(event.key==='Enter'){translate()}">
+
 
         <button onclick="translate()">Translate</button>
 
