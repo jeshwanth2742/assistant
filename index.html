@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Telugu to English Translator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Enter Key Test</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    input { padding: 10px; width: 250px; }
+    button { padding: 10px 15px; }
+    #result { margin-top: 20px; font-size: 18px; color: green; }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>Telugu → English Translator</h2>
+  <h2>Press Enter to See Result</h2>
 
-        <input type="text" id="teluguInput" placeholder="Enter Telugu word..." onkeydown="if(event.key==='Enter'){translate()}">
+  <input type="text" id="textInput" placeholder="Type something & press Enter">
+  <button onclick="showText()">Submit</button>
 
+  <div id="result"></div>
 
-        <button onclick="translate()">Translate</button>
+  <script>
+    const input = document.getElementById("textInput");
 
-        <h3 id="output"></h3>
-    </div>
+    // Detect Enter key
+    input.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        showText();
+      }
+    });
 
-    <script src="script.js"></script>
+    function showText() {
+      const value = input.value;
+      document.getElementById("result").innerHTML = "You entered: " + value;
+    }
+  </script>
 
 </body>
 </html>
