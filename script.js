@@ -1,3 +1,5 @@
+alert("JS is working");
+
 const translator = {
     "హాయ్": "Hello",
     "నమస్కారం": "Hello",
@@ -18,6 +20,8 @@ const translator = {
 
 function translate() {
     const input = document.getElementById("teluguInput").value.trim();
+    console.log("INPUT:", input);
+
     const output = document.getElementById("output");
 
     if (translator[input]) {
